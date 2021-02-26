@@ -1,1 +1,94 @@
-<h2>Hello</h2>
+<h1>A Communication Channel View of Active Perception in Learning Agents</h1>
+
+The goal of this research is to explore how it is possible to optimize the communication channel between the learning agent's perception and the learning algorithm itself, so to exploit data at best, reduce the amount of learning steps, and improve performance.
+
+So-far obtained results show that it is possible to achieve this goal by selectively prioritizing the agent's experiences that are being effectivelly transfered via the communication channel. The techniques implemented range from minimization of the correlation between experiences in 1); Prioritization criteria based on type of reinforcement received in 2), 3) as well as the properties of agent's perceived space such as the Shannon's entropy in 4) and Kullback–Leibler divergence in 5); Evolutionary meta-learning applied to artificial neural network approximators as a selection mechanism has also been implemented on reinforcement learning problems that deal with a discrete and continuous state spaces in 6), 7).
+
+<h2>Motivation</h2>
+<hr>
+
+Online reinforcement learning agents are currently able to process an increasing amount of data by converting (approximating) it into a higher order reward functions such as values which are used to determine agents behaviour or policy. 
+
+The expansion of the information collected from the environment is mainly the product of the agent's trend to scale up to a class of more complex and realistic tasks that are quickly becoming a state-of-the-art benchmarks.
+
+Bellman's curse of dimensionality warns us about the difficulties that approximation faces when scaling up to process high-dimensional data; With the increase of the dimension of the input the volume of that space (represented by all of its possible values) becomes exponentially higher leading to data sparsity.
+
+To mitigate the effects of the data sparsity in an increasingly high dimensions the common approach is just to train it on a higher amount of data, which in reinforcement learning directly translates to the agent going through a computationally costly generation of more transitions over a specific environment.
+
+<h2>Shifting the Nature of the Problem</h2>
+<hr>
+
+If we take into consideration that, with the increased dimensionality of the data perceived by the agent we increase the sparsity of the collected data together with the fact that we are faced with a limited bandwidth between the agent observations and the learning mechanism we can look at presented challenges as a communication problem. 
+
+This is exactly the problem that Claude Shannon and John Tukey tried to solve during their period at the Bell Labs which inevitably led to the cornerstone of the information theory: the famous work by Shannon 8).
+
+Sparsely encoded data at the input makes the source more predictable and thus the agent gains less information each time it receives data from its immediate environment. In other words, the sparse data that an agent perceives during it's interaction with the environment has lower Shannon's entropy.
+
+The communication problem the two engineers faced in a nutshell is getting as much of information (Shannon's bits) through a channel of limited capacity measured by Tukey's bits. Theoretically the ideal communication case would be if the transferred information Shannon bits were equal to Tukeys: We would have used the full potential of the channels bandwidth.
+
+This is definitely not the case with the research topic of machine learning applications: As we increase the dimensionality of the agent's input space the communication channel to the machine learning algorithm becomes less optimized.
+
+
+<h2>References</h2>
+<hr>
+
+1) M Ramicic, A Bonarini, Uncertainty Maximization in Partially Observable Domains: A Cognitive Perspective, *Preprint
+
+https://arxiv.org/abs/2102.11232
+
+2) M Ramicic, A Bonarini, Augmented Memory Replay in Reinforcement Learning With Continuous Control
+
+https://doi.org/10.1109/TCDS.2021.3050723
+
+3) M Ramicic, A Bonarini, Correlation Minimizing Replay Memory in Temporal-Difference Reinforcement Learning
+
+https://www.sciencedirect.com/science/article/pii/S092523122030179X
+
+4) M Ramicic, A Bonarini, Attention-based experience replay in deep Q-learning
+
+https://re.public.polimi.it/retrieve/handle/11311/1031983/226543/C111.pdf
+
+5) M Ramicic, A Bonarini, Adaptation of learning agents through artificial perception
+
+https://re.public.polimi.it/retrieve/handle/11311/1119596/463799/AdaptationOfLearningAgentsThroughArtificialPerceptionPerception.pdf
+
+6) M Ramicic, A Bonarini, Entropy-based prioritized sampling in deep Q-learning
+
+https://re.public.polimi.it/retrieve/handle/11311/1031981/226539/V414.pdf
+
+7) M Ramicic, A Bonarini, Towards learning agents with personality traits: Modeling Openness to Experience
+
+https://re.public.polimi.it/retrieve/handle/11311/1120069/464828/LearningAgentsWithPersonalityTraits.pdf
+
+8) M Ramicic, A Bonarini, Selective perception as a mechanism to adapt agents to the environment: An evolutionary approach
+
+https://re.public.polimi.it/retrieve/handle/11311/1120067/464823/SelctivePerception08630035.pdf
+
+9) M Ramicic, A Bonarini, Augmented Replay Memory in Reinforcement Learning With Continuous Control, *Preprint
+
+https://arxiv.org/abs/1912.12719
+
+10) C.E. Shannon, A mathematical theory of communication
+
+https://ieeexplore.ieee.org/document/6773024
+
+
+
+<h2>People</h2>
+<hr>
+
+Professor Andrea Bonarini
+
+https://bonarini.faculty.polimi.it
+
+
+Mirza Ramicic
+
+https://www.aic.fel.cvut.cz/members/mirza-ramicic
+
+
+
+<h2>Keywords</h2>
+<hr>
+
+reinforcement learning,temporal-difference learning,replay memory,prioritized experience replay, stochastic gradient descent,artificial neural networks,cognition,perception,meta-learning,q-learning,deep learning,evolutionary algorithms,cognitive modeling,intrinsic motivation,personality types,the big five personality traits,attention
